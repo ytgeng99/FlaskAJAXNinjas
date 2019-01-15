@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #wrapper {
+                width: 70%;
+                margin: 40px auto;
+            }
+            #heading, #img-div {
+                text-align: center;
+            }
+            #img-div {
+                margin-bottom: 40px;
+            }
+            #buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+            .btn {
+                width: 100px;
+                height: 50px;
+            }
+            #custom-color{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="heading"></div>
+            <div id="img-div"></div>
+
+            <div id="buttons">
+                <button class="btn" type="submit" id="red">red</button>
+                <button class="btn" type="submit" id="blue">blue</button>
+                <button class="btn" type="submit" id="orange">orange</button>
+                <button class="btn" type="submit" id="purple">purple</button>
+            </div>
+
+            <div id="custom-color">
+                <p>Or choose a custom color:</p>
+                <form id="form-color" method='post'>
+                    <input type="text" id="customcolor">
+                    <button type="submit">Enter</button>
+                </form>
+            </div>
+        </div>
+        
+        <!--***********************LOAD SCRIPTS***************************-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
